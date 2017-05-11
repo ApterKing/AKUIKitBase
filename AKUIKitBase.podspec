@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "9.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source       = { :git => "http://EXAMPLE/AKUIKitBase.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ApterKing/AKUIKitBase.git", :tag => "#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source_files  = "Classes/*.swift"
