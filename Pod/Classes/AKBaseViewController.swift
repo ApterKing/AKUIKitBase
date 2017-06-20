@@ -8,14 +8,14 @@
 
 import UIKit
 
-public class AKBaseViewController: UIViewController, UIGestureRecognizerDelegate {
+open class AKBaseViewController: UIViewController, UIGestureRecognizerDelegate {
     
     public var isNavigationBarHiddenInController: Bool {
         return navigationBarHidden
     }
     fileprivate var navigationBarHidden = false;
 
-    public override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -24,20 +24,20 @@ public class AKBaseViewController: UIViewController, UIGestureRecognizerDelegate
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
-    public override func viewWillLayoutSubviews() {
+    override open func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
     
-    public override func viewDidLayoutSubviews() {
+    override open func viewDidLayoutSubviews() {
         super.viewWillLayoutSubviews()
     }
     
-    public override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationBarHidden = self.navigationController?.isNavigationBarHidden ?? false
     }
     
-    public override func viewWillDisappear(_ animated: Bool) {
+    override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if ((self.navigationController != nil) && (self.navigationController?.viewControllers.contains(self))! && (self.navigationController?.topViewController?.isKind(of: AKBaseViewController.self))!) {
             let controller: AKBaseViewController = self.navigationController?.topViewController as! AKBaseViewController
@@ -45,24 +45,24 @@ public class AKBaseViewController: UIViewController, UIGestureRecognizerDelegate
         }
     }
     
-    public override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    public override var preferredStatusBarStyle: UIStatusBarStyle {
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
     
-    public override var shouldAutorotate: Bool {
+    override open var shouldAutorotate: Bool {
         return false
     }
     
-    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.portrait
     }
     
-    public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return UIInterfaceOrientation.portrait
     }
 

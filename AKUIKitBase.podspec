@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "AKUIKitBase"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "UIKit Base"
 
   s.homepage     = "https://github.com/ApterKing/AKUIKitBase"

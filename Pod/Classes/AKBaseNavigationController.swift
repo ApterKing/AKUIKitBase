@@ -8,27 +8,27 @@
 
 import UIKit
 
-public class AKBaseNavigationController: UINavigationController {
+open class AKBaseNavigationController: UINavigationController {
 
-    public override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
     }
 
-    public override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    public override var shouldAutorotate: Bool {
+    override open var shouldAutorotate: Bool {
         return self.visibleViewController?.shouldAutorotate ?? false
     }
     
-    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return self.visibleViewController?.supportedInterfaceOrientations ?? UIInterfaceOrientationMask.portrait
     }
     
-    public override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
         return self.visibleViewController?.preferredInterfaceOrientationForPresentation ?? UIInterfaceOrientation.portrait
     }
 
